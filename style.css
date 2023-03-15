@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap');
+
+:root {
+     /* Primary */
+
+ --red: hsl(0, 100%, 68%);
+
+/* Neutral */
+
+--veryDarkBlue: hsl(230, 29%, 20%);
+--darkGrayishBlue: hsl(230, 11%, 40%);
+--grayishBlue: hsl(231, 7%, 65%);
+--lightGrayishBlue: hsl(207, 33%, 95%);
+
+/* Fonts */
+
+--nav-font :'Barlow', sans-serif;
+--body-font :'Barlow Condensed', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 18px;
+    font-family: var(--body-font);
+    padding: 6rem 10rem;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+/* Nav */
+.nav-center {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-toggle {
+    display: none;
+    border: none;
+}
+
+.links {
+    display: flex;
+}
+
+.links a {
+    padding: 15px;
+    font-weight: 700;
+    font-family: var(--nav-font);
+    text-transform: uppercase;
+    font-size: 14px;
+    color: var(--veryDarkBlue);
+}
+.links a:hover {
+    text-decoration: underline;
+}
+
+.login {
+    padding-left: 40px;
+}
+
+.login a {
+    color: var(--grayishBlue);
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 3rem;
+}
+.container {
+    padding: 5rem 0;
+    
+}
+
+.container span {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 2px 14px;    
+}
+.container p {
+    color: var(--grayishBlue);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.container h1 {
+    color: var(--veryDarkBlue);
+    font-size: 4rem;
+    padding: 1.5rem 0;
+    text-transform: uppercase;
+}
+
+.container h4 {
+    color:var(--darkGrayishBlue);
+    font-family: var(--nav-font);
+}
+
+.button-container {
+    display: flex;
+    padding-top: 4rem;
+    align-items: center;
+}
+.btn {
+    background-color: var(--red);
+    border: none;
+    border-radius: 5px;
+    padding: 1rem;
+    color: white;
+    text-transform: uppercase;
+    font-family: var(--body-font);
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: hsl(0, 65%, 65%);;
+}
+
+.button-container p {
+    padding-left: 20px;
+}
+
+.imagen {
+    position: fixed;
+    left: 50%;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 6rem 2rem;
+    }
+    .main-container {
+        
+        grid-template-rows: 50% 50%;
+        grid-template-columns: inherit;   
+          
+    }
+
+    .imagen {
+        position: inherit;
+        grid-row: 1; 
+    }
+
+    .container {
+        font-size: .9rem;
+        padding-top: 2.5rem;
+    }
+
+    .container h1{
+        font-size: 2rem;  
+
+    }
+
+    .imagen img {
+        width: 50vh;
+    }
+    
+    .nav-toggle {
+        display: flex;
+        position: absolute;
+        right: 15px;
+        top: 100px;
+        cursor: pointer;
+    }
+    p {
+        font-size: .7rem;
+    }
+
+    .links {
+        flex-direction: column;
+        box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .2);
+        border-radius: 5px;
+        background-color: #fff;
+        position: absolute;
+        right: 60px;
+        top: 150px;
+        padding: 1.2rem 3rem;
+        display: none;
+    }
+    .links li {
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+    }
+    .links li a {
+        font-weight: bold;
+        font-family: var(--body-font);
+        font-size: 1.2rem;
+
+    }
+    .login {
+        padding: inherit;      
+    }
+
+    section {
+        width: 50%;
+    }
+
+    .login a {
+        color: var(--grayishBlue);
+    }
+
+    .show-links {
+        display: flex;
+    }
+    .button-container {
+        padding: 25px 0;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 12px;
+        width: 190px;
+    }
+}
